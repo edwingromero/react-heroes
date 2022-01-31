@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../../data/HeroCard.css'
-
+import { heroImages } from '../../helpers/heroImages';
 
 export const HeroCard = ({
   id,
@@ -14,7 +14,7 @@ export const HeroCard = ({
     <>
       <Link to={`/hero/${id}`} className="my-card">
         <img
-          src={`./assets/${id}.jpg`}
+          src={heroImages(`./${id}.jpg`)}
           className="img img-responsive"
           alt={superhero}
         />
